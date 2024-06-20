@@ -1,103 +1,80 @@
+/* styles.css */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     margin: 0;
-    padding: 0;
+    background: #f5f5f5;
 }
 
 .container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-}
-
-h1 {
-    text-align: center;
-    color: #333;
-}
-
-form {
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 400px;
 }
 
-input[type="text"] {
-    flex: 1;
+.form-container {
+    position: relative;
+    width: 100%;
+}
+
+.form {
+    display: none;
+    flex-direction: column;
+    padding: 30px;
+    transition: opacity 0.5s ease;
+}
+
+.form.active {
+    display: flex;
+    opacity: 1;
+}
+
+input {
+    margin-bottom: 15px;
     padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
 button {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #007bff;
-    color: #fff;
+    padding: 10px;
     border: none;
-    border-radius: 4px;
+    background: #007BFF;
+    color: #fff;
+    border-radius: 5px;
     cursor: pointer;
+    transition: background 0.3s ease;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background: #0056b3;
 }
 
-#tasks {
-    display: flex;
-    justify-content: space-between;
+p {
+    margin-top: 10px;
 }
 
-#tasks div {
-    flex: 1;
-    margin-right: 20px;
+span {
+    color: #007BFF;
+    cursor: pointer;
+    transition: color 0.3s ease;
 }
 
-#tasks div:last-child {
-    margin-right: 0;
+span:hover {
+    color: #0056b3;
 }
 
-h2 {
-    color: #555;
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-li {
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+.message {
+    color: red;
+    font-size: 0.9em;
+    margin-top: -10px;
     margin-bottom: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-li.completed {
-    /*text-decoration: line-through;*/
-    background-color: #e0e0e0;
-}
-
-button.complete-btn {
-    background-color: #28a745;
-}
-
-button.complete-btn:hover {
-    background-color: #218838;
-}
-
-button.delete-btn {
-    background-color: #dc3545;
-}
-
-button.delete-btn:hover {
-    background-color: #c82333;
 }
